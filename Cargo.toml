@@ -1,0 +1,24 @@
+[package]
+name = "sir_model"
+version = "0.1.0"
+authors = ["Matt Spraggs <matthew.spraggs@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+diffeq = { version = "0.1.0", features = ["serde0"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+wasm-bindgen = { version = "0.2.60", features = ["serde-serialize"] }
+
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+  'Document',
+  'Element',
+  'HtmlElement',
+  'Node',
+  'Window',
+]
